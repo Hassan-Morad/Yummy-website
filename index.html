@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="icon" href="./img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-web ">
+    <div class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black  justify-content-center align-items-center ">
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+  </div>
+    
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-nav">
+    <div class="container-fluid ">
+      <a href="" class="ms-sm-5 me-4" id="logo"><img class="logo" src="./img/logo.png"  alt="" srcset="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item me-2">
+            <a class="nav-link active" id="category" aria-current="page" href="#">Categories</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active" id="area" aria-current="page" href="#">Area</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active" id="Ingredients" aria-current="page" href="#">Ingredients</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="nav-link active" id="about" aria-current="page" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="contact" aria-current="page" href="#">Countact Us</a>
+          </li>
+          
+          
+          
+        </ul>
+        <form class="d-flex me-5">
+          <input class="form-control me-2" onkeyup="searchByName(this.value)" type="search" placeholder="Search By Name" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>  
+
+<!-- 
+    <div class="side-nav-menu min-vh-100  position-fixed d-none d-sm-flex top-0">
+      <div
+        class="nav-tab d-flex flex-column justify-content-between min-vh-100 p-4"
+      >
+        <div class="links">
+          <ul class="list-unstyled overflow-hidden">
+            <li class="py-2 position-relative cursor-pointer" id="search">
+              Search
+            </li>
+            <li class="py-2 position-relative cursor-pointer" id="category">
+              Categories
+            </li>
+            <li class="py-2 position-relative cursor-pointer" id="area">
+              Area
+            </li>
+            <li class="py-2 position-relative cursor-pointer" id="Ingredients">
+              Ingredients
+            </li>
+            <li class="py-2 position-relative cursor-pointer" id="contact">
+              Contact Us
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <div class="footer">
+            <p>Copyright © 2023 Hassan Morad , <br /> All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
+      >
+        <img class="logo" id="logo" src="./img/logo.png" alt="" srcset="" />
+        <i class="fa-solid open-close-icon fa-2x fa-x d-none"></i>
+        <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+   <div class="container pt-3 ps-3">
+    <div class="row displayMealInfo z-0  d-none">
+
+    </div>
+   </div>
+    <section class="">
+      <!-- <section class="container inputSearch d-none">
+        <div class="row py-4">
+          <div class="col-md-6">
+            <input
+              onkeyup="searchByName(this.value)"
+              class="form-control bg-transparent text-white"
+              type="text"
+              placeholder="Search By Name"
+              fdprocessedid="2eckse"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              onkeyup="searchByLetter(this.value)"
+              maxlength="1"
+              class="form-control bg-transparent text-white"
+              type="text"
+              placeholder="Search By First Letter"
+              fdprocessedid="57sg3j"
+            />
+          </div>
+        </div>
+      </section> -->
+      <section>
+        <div class="container-fluid px-4 py-4">
+          <div class="row main-meals"></div>
+        </div>
+      </section>
+      
+    </section>
+
+    <footer class="bg-footer mt-auto  py-5 ">
+      <div class="container-sm">
+        <h3 class="h5 fw-semibold mb-3 text-light">Get the Yummy App</h3>
+        <p class="text-light">We will sent you a link, open it on your phone </p>
+        <div class="row g-4 justify-content-between align-items-center pb-3 border-bottom border-opacity-25 border-dark">
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control w-100"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="col-md-3 text-end">
+            <button class="btn bg-black text-light w-100">
+              Share App Link
+            </button>
+          </div>
+        </div>
+        <div class="text-center text-light mt-4 ">
+         <p>Copy Right 2023 © By Hassan Morad All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

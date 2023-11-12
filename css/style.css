@@ -1,0 +1,115 @@
+
+.bg-web{
+    background: linear-gradient(to right, #91979b, #212529);
+}
+.bg-nav{
+    background-color: #212529; /* Match with the dark end of your gradient */
+}
+.bg-footer{
+    background-color: #212529; /* Match with the dark end of your gradient */
+
+}
+.bg-about {
+    background: linear-gradient(to right, #91979b, #212529);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Text color to ensure readability */
+}
+
+.layer{
+    transform: translateY(100%);
+    transition: 0.5s all;
+    text-align: center;
+    overflow: hidden;
+}
+p,h1,h2,h3,h4,h5,h6{
+    font-family: 'Open Sans', sans-serif;
+}
+.back{
+    transition: all 0.4s;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.back:hover{
+    color:white;
+}
+.item:hover .layer{
+    transform: translateY(0%);
+}
+nav{
+    z-index: 99999999999999;
+}
+.loading-screen{
+    display: flex;
+    z-index: 99999;
+}
+.list-unstyled li,.item{
+    cursor: pointer;
+}
+.nav-tab {
+    background-color: black;
+    color: white;
+    
+}
+.navbar-collapse{
+    align-items: flex-start !important;
+}
+.logo {
+    width: 50px;
+    align-items: flex-start !important;
+}
+.side-white img{
+    vertical-align: middle;
+}
+.fa-solid{
+    cursor: pointer;
+}
+.fa-globe,.fa-share-nodes{
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px;
+
+}
+.side-white{
+    height: 100vh;
+    width:25%;
+    z-index: 99999;
+    
+    padding: 20px;
+    
+}
+.inputSearch{
+    position: relative;
+    z-index: 99999999999;
+}
+.inputSearch input::placeholder{
+    color: white !important;
+    opacity: 0.3 !important;
+}
+.welcome-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.journey-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.explore-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.utilize-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .width {
+        width: 100% !important; /* Adjust padding for smaller screens */
+    }
+}
