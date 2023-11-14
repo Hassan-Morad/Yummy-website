@@ -8,6 +8,7 @@
     <link rel="icon" href="./img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/skitter.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -51,11 +52,60 @@
         </ul>
         <form class="d-flex me-5">
           <input class="form-control me-2" onkeyup="searchByName(this.value)" type="search" placeholder="Search By Name" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-warning" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>  
+
+    <div class="skitter slider mt-3 mx-auto skitter-large with-dots">
+      <ul>
+        <li>
+          <a href="#cut">
+            <img src="./img/wp3376127.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              Here is everything new about the world of food.
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBlocks">
+            <img src="./img/wp7029319.webp" class="swapBlocks" />
+          </a>
+          <div class="label_text">
+            <p>
+              Find your favorite meal.
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBarsBack">
+            <img src="./img/cooked-food-1860208.jpg" class="swapBarsBack" />
+          </a>
+          <div class="label_text">
+            <p>
+              Yami website is the best in the field of searching for recipes around the world
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBarsBack">
+            <img src="./img/thumb-1920-807704.jpg" class="swapBarsBack" />
+          </a>
+          <div class="label_text">
+            <p>
+              Every day new recipes from around the world.
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
 
 <!-- 
     <div class="side-nav-menu min-vh-100  position-fixed d-none d-sm-flex top-0">
@@ -147,8 +197,8 @@
 
     <footer class="bg-footer mt-auto  py-5 ">
       <div class="container-sm">
-        <h3 class="h5 fw-semibold mb-3 text-light">Get the Yummy App</h3>
-        <p class="text-light">We will sent you a link, open it on your phone </p>
+        <h3 class="h5 fw-semibold mb-3 text-footer">Get the Yummy App</h3>
+        <p class="text-footer">We will sent you a link, open it on your phone </p>
         <div class="row g-4 justify-content-between align-items-center pb-3 border-bottom border-opacity-25 border-dark">
           <div class="col-md-9">
             <input
@@ -158,18 +208,20 @@
             />
           </div>
           <div class="col-md-3 text-end">
-            <button class="btn bg-black text-light w-100">
+            <button class="border-0 rounded-3 p-2 btn-bg text-black w-100">
               Share App Link
             </button>
           </div>
         </div>
-        <div class="text-center text-light mt-4 ">
+        <div class="text-center text-footer mt-4 ">
          <p>Copy Right 2023 © By Hassan Morad All Rights Reserved</p>
         </div>
       </div>
     </footer>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.skitter.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

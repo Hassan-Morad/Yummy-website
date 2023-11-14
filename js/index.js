@@ -10,6 +10,9 @@ let apiResponse;
 function showLoadingScreen() {
   $(".loading-screen").css("display", "flex");
 }
+$(document).ready(function() {
+  $('.skitter-large').skitter();
+})
 
 // Function to hide the loading screen
 function hideLoadingScreen() {
@@ -136,6 +139,7 @@ function displayMeals(data) {
 function displayAbout() {
   showLoadingScreen();
   $(".main-meals").removeClass("d-none");
+  $(".slider").addClass("d-none");
 
   // Generate the HTML code for the contact form
   let box = `
@@ -208,6 +212,7 @@ function generateIngredientTagsList(mealTags) {
 async function searchByName(name) {
     showLoadingScreen();
   $(".main-meals").removeClass("d-none");
+  $(".slider").addClass("d-none");
   const apiResponseSearch = await fetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
   );
@@ -242,6 +247,7 @@ async function searchByName(name) {
 // Function to search meals by ID of meal and display it
 async function displayItemIngredientById(id) {
   showLoadingScreen();
+  $(".slider").addClass("d-none");
   const apiResponseSearch = await fetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
   );
@@ -260,7 +266,7 @@ async function displayItemIngredientById(id) {
         <h2>Instructions</h2>
         <i class="fa-regular back  fa-circle-xmark"></i>
       </div>
-      <p>${mealsDatasearch.meals[0].strInstructions}</p>
+      <p>${mealsDatasearch.meals[0].strInstructions.split(" ").splice(0,80).join(" ")}</p>
       <h3>Area: ${mealsDatasearch.meals[0].strArea}</h3>
       <h3>Category: ${mealsDatasearch.meals[0].strCategory}</h3>
       <h3>Recipes:</h3>
@@ -290,6 +296,7 @@ async function displayItemIngredientById(id) {
 // Function to display Categorys on the page
 function displayCategory(mealsDataCategory) {
   $(".main-meals").removeClass("d-none");
+  $(".slider").addClass("d-none");
   let box = ``;
   for (let i = 0; i < mealsDataCategory.categories.length; i++) {
     let displayLength = 120;
@@ -345,6 +352,7 @@ async function displayItemOfCategory(strCategory) {
 // Function to display Areas on the page
 function displayArea(mealsDataArea) {
   $(".main-meals").removeClass("d-none");
+  $(".slider").addClass("d-none");
   let box = ``;
   for (let i = 0; i < mealsDataArea.meals.length; i++) {
     box += ` <div class="col-md-3" ">
@@ -381,6 +389,7 @@ async function displayItemOfArea(strArea) {
     `https://www.themealdb.com/api/json/v1/1/filter.php?a=${strArea}`
   );
   let mealsDataArea = await apiResponseArea.json();
+  $(".slider").addClass("d-none");
   displayMeals(mealsDataArea);
   $(".item").click(function (e) {
     displayItemIngredientById(mealsDataArea.meals[this.getAttribute("index")].idMeal);
@@ -395,6 +404,7 @@ async function displayItemOfArea(strArea) {
 function displayIngredients(mealsDataIngredients) {
   // Removes the "d-none" class from the ".main-meals" element
   $(".main-meals").removeClass("d-none");
+  $(".slider").addClass("d-none");
 
   let box = ``;
   let displayLength = 140;
@@ -409,10 +419,7 @@ function displayIngredients(mealsDataIngredients) {
           <div class="rounded-2 text-center d-flex justify-content-center align-items-center flex-column text-white cursor-pointer">
             <i class="fa-solid pb-3 fa-drumstick-bite fa-4x"></i>
             <h3>${mealsDataIngredients.meals[i].strIngredient}</h3>
-            <p>${mealsDataIngredients.meals[i].strDescription.substring(
-              0,
-              displayLength
-            )}</p>
+            <p>${mealsDataIngredients.meals[i].strDescription.substring(0,displayLength)}</p>
           </div>
         </div>`;
   }
@@ -453,6 +460,7 @@ async function displayItemOfIngredients(strIngredients) {
   );
   console.log(apiResponseIngredients);
   let mealsDataIngredients = await apiResponseIngredients.json();
+  $(".slider").addClass("d-none");
 
   // Display the retrieved meals on the webpage
   displayMeals(mealsDataIngredients);
@@ -477,6 +485,7 @@ async function displayItemOfIngredients(strIngredients) {
 function displayContact() {
   showLoadingScreen();
   $(".main-meals").removeClass("d-none");
+  $(".slider").addClass("d-none");
 
   // Generate the HTML code for the contact form
   let box = `<div class="contact my-5  d-flex justify-content-center align-items-center">

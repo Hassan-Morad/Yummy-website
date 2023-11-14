@@ -9,6 +9,15 @@
     background-color: #212529; /* Match with the dark end of your gradient */
 
 }
+.skitter{
+    max-width: 1250px !important;
+}
+.text-footer{
+    color: white;
+}
+.btn-bg{
+    background-color: #FDD110;
+}
 .bg-about {
     background: linear-gradient(to right, #91979b, #212529);
     padding: 40px;
