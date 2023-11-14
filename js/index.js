@@ -67,6 +67,8 @@ $("#logo").click(async function () {
     displayItemIngredientById(mealsData.meals[this.getAttribute("index")].idMeal);
     $('.main-meals').addClass('d-none');
     $('.displayMealInfo').removeClass('d-none');
+    $('.slider').removeClass('d-none');
+
     
 })});
 // Handle click event for contact button
